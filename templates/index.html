@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Group Eats</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Group Eats Finder</h1>
+
+<form action="/results" method="POST">
+
+<label>Location</label>
+<input type="text" name="location" required>
+
+<div id="members">
+
+<div class="member">
+
+<h3>Group Member</h3>
+
+<label>Cuisine</label>
+<select name="cuisine">
+<option value="mexican">Mexican</option>
+<option value="italian">Italian</option>
+<option value="chinese">Chinese</option>
+<option value="american">American</option>
+</select>
+
+<label>Price</label>
+<select name="price">
+<option value="$">$</option>
+<option value="$$">$$</option>
+<option value="$$$">$$$</option>
+</select>
+
+</div>
+
+</div>
+
+<button type="button" onclick="addMember()">Add Member</button>
+<br>
+<button type="submit">Find Restaurants</button>
+
+</form>
+
+</div>
+
+<script>
+
+function addMember(){
+
+const container = document.getElementById("members")
+
+const html = `
+<div class="member">
+
+<h3>Group Member</h3>
+
+<label>Cuisine</label>
+<select name="cuisine">
+<option value="mexican">Mexican</option>
+<option value="italian">Italian</option>
+<option value="chinese">Chinese</option>
+<option value="american">American</option>
+</select>
+
+<label>Price</label>
+<select name="price">
+<option value="$">$</option>
+<option value="$$">$$</option>
+<option value="$$$">$$$</option>
+</select>
+
+</div>
+`
+
+container.insertAdjacentHTML("beforeend", html)
+
+}
+
+</script>
+
+</body>
+</html>

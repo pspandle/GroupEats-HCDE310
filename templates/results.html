@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Results</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Best Restaurants For Your Group</h1>
+
+    {% for r in restaurants %}
+
+    <div class="restaurant {% if loop.first %}top-restaurant{% endif %}">
+
+        {% if loop.first %}
+        <span style="display:inline-block; font-size:11px; font-weight:bold;
+                     padding:3px 8px; border-radius:5px; margin-bottom:8px;
+                     background-color:#dbeafe; color:#1d4ed8;">
+            Top Pick
+        </span>
+        {% endif %}
+
+        <div class="restaurant-content">
+
+            {% if r.image_url %}
+            <img src="{{ r.image_url }}" alt="{{ r.name }}" class="restaurant-img">
+            {% else %}
+            <div class="restaurant-img" style="background-color:#f0f0f0;"></div>
+            {% endif %}
+
+            <div class="restaurant-info">
+
+                <h2>{{ r.name }}</h2>
+
+                <p>⭐ <strong>{{ r.rating }}</strong> &nbsp;
+                   💰 <strong>{{ r.price }}</strong> &nbsp;
+                   📍 {{ r.address }}</p>
+
+                <p><strong>Sentiment:</strong> {{ r.sentiment }}</p>
+
+                <p><strong>Group Score:</strong> {{ r.score }}</p>
+
+                <a href="{{ r.url }}" target="_blank" class="yelp-link">
+                    View on Yelp →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+    <br>
+
+    <a href="/">← Search Again</a>
+
+</div>
+
+</body>
+</html>

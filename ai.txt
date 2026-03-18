@@ -1,0 +1,18 @@
+I used ChatGPT to help understand parts of the assignment and debug issues in my code.
+
+I asked questions about:
+How to integrate the Yelp API into a Flask application and structure API requests.
+How to use TextBlob for sentiment analysis on restaurant reviews.
+How to retrieve and process review data from the Yelp API.
+How to handle multiple form inputs (such as multiple group members’ preferences) using Flask.
+How to design a scoring function to rank restaurants based on group preferences.
+How to troubleshoot errors when my Flask app or API requests were not working.
+How to improve the look of the page
+
+Example prompts included:
+"How do I use the Yelp API in Flask?"
+"How do I analyze text sentiment using TextBlob?"
+"How do I handle multiple form inputs in Flask?"
+"What is the best way to do the scoring for restaurants?"
+"How do I prevent my API key from being uploaded to GitHub?"
+"How can I improve the overall look?"

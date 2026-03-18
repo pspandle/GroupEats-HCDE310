@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+}
+
+
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #2b7cff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f5ed1;
+}
+
+.restaurant {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.top-restaurant {
+    border: 2px solid #2b7cff;
+    background-color: #eaf2ff;
+}
+
+.restaurant-content {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    font-family: inherit;
+}
+
+.restaurant-img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.restaurant-info {
+    flex: 1;
+    font-family: inherit;
+}
+
+.restaurant-info h2 {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    font-family: inherit;
+}
+
+.yelp-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #e63946;
+    font-weight: bold;
+}
+
+.yelp-link:hover {
+    text-decoration: underline;
+}
